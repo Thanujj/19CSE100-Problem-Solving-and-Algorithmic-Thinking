@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:32:23 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzEwOjMxOjAzIEFNOzMwNTM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzExOjMyOjIzIEFNOzI7MzE2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="MOD FUNCTION WITH USING WO NUMBERS"/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER AN INTEGER&quot;" newline="True"/>
+            <input variable="A"/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER AN INEGER LESS THAN A&quot;" newline="True"/>
+            <input variable="B"/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <comment text="C IS QUOTIENT"/>
+            <assign variable="C" expression="A/B"/>
+            <output expression="&quot;THE REMINDER IS &quot;&amp;A-C*B" newline="True"/>
+            <comment text="REMAINDER = DIVIDEND-QUOTIENT*DIVISOR"/>
+            <comment text="THE REMAINDER IS THE MOD VALUE"/>
+        </body>
+    </function>
+</flowgorithm>

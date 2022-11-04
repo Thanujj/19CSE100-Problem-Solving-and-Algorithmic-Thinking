@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:53:36 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzA5OjM5OjQ3IEFNOzMwNzc="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzEwOjUzOjM2IEFNOzM7MzE3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PREPARING QUADRATIC EQUATION AND FINDING ITS ROOTS"/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <comment text="THE VALUSE OF A,B,C ARE THE COEFFICIENTS OF X^2,X,CONSTANT&#13;&#10;RESPECTIVELY.THE USER ALIGNS THE VALUES OF THEM."/>
+            <output expression="&quot;ENTER THE COEFFICIENT OF X^2&quot;" newline="True"/>
+            <input variable="A"/>
+            <output expression="&quot;ENTER THE COEFFICIENT OF X&quot;" newline="True"/>
+            <input variable="B"/>
+            <output expression="&quot;ENTER THE CONSTANT&quot;" newline="True"/>
+            <input variable="C"/>
+            <comment text="THE QUADRIC EQUYATION WILL BE FORMED "/>
+            <output expression="&quot;THE QUADRATIC EQUATION IS &quot;&amp;A&amp;&quot;X^2+&quot;&amp;B&amp;&quot;X+&quot;&amp;C" newline="True"/>
+            <comment text="THYE SYSTEM WILL DISPLAYS THE ROOTS OF THE EQUATION"/>
+            <declare name="Root1" type="Real" array="False" size=""/>
+            <assign variable="Root1" expression="(-B+(B^2-4*A*C)^(1/2))/2*A"/>
+            <output expression="&quot;THE ROOT1 &quot;&amp;Root1" newline="True"/>
+            <declare name="Root2" type="Real" array="False" size=""/>
+            <assign variable="Root2" expression="(-B-(B^2-4*A*C)^(1/2))/2*A"/>
+            <output expression="&quot;THE ROOT2 &quot;&amp;Root2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

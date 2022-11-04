@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:50:43 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzEwOjE0OjUzIEFNOzMwNTk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzEwOjUwOjQzIEFNOzI7MzE2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="SWAPPING TWO NUMBERS WITHOUT USING THIRD VARIABLE"/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <comment text="THE USER ALIGNS THE VALUES FOR A,B "/>
+            <output expression="&quot;ENTER THE FIRST NUMBER&quot;" newline="True"/>
+            <input variable="A"/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE SECOUND NUMBER&quot;" newline="True"/>
+            <input variable="B"/>
+            <assign variable="A" expression="A*B"/>
+            <assign variable="B" expression="A/B"/>
+            <assign variable="A" expression="A/B"/>
+            <comment text="SWAPPING THE VALUSES"/>
+            <output expression="&quot;AFTER SWAPPING A= &quot;&amp;A&amp;&quot;B= &quot;&amp;B" newline="True"/>
+            <comment text="THE VALUSE OF A,B WILL BE SWAPPED(INTER CHANGERD)"/>
+        </body>
+    </function>
+</flowgorithm>

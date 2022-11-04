@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:51:32 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzA5OjA2OjU0IEFNOzMwNjk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTA0OzEwOjUxOjMyIEFNOzI7MzE2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="CONVERTING CELSIUS SCALE TO FAHRIEN HEAT "/>
+            <declare name="Celsius" type="Real" array="False" size=""/>
+            <output expression="&quot;ENTER Celsius&quot;" newline="True"/>
+            <comment text="This is celsius temperature given by user "/>
+            <input variable="Celsius"/>
+            <declare name="Fahrien" type="Real" array="False" size=""/>
+            <assign variable="Fahrien" expression="9/5*Celsius+32"/>
+            <comment text="The Fahrien temperature is given by the system&#13;&#10;"/>
+            <output expression="&quot;The temperature in Fahrien temp &quot;&amp;Fahrien" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
