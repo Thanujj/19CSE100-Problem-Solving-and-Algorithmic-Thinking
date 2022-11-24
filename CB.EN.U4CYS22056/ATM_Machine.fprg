@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-19 09:39:56 PM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTE4OzA4OjUxOjIzIEFNOzMzMjU="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTExLTE4OzExOjM3OjQxIEFNOzQ7MzQzNA=="/>
+        <attribute name="edited" value="QWRtaW47TUFIRVNIOzIwMjItMTEtMTk7MDk6Mzk6NTYgUE07MTg7MjM4NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to SBI ATM&quot;" newline="True"/>
+            <declare name="NAME" type="String" array="False" size=""/>
+            <output expression="&quot;PLEASE ENTER YOUR NAME&quot;" newline="True"/>
+            <input variable="NAME"/>
+            <declare name="Acc" type="Integer" array="False" size=""/>
+            <output expression="&quot;PLEASE ENTER YOUR ACCOUNT NUMBER&quot;" newline="True"/>
+            <input variable="Acc"/>
+            <declare name="PIN" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR PRIVATE PIN&quot;" newline="True"/>
+            <input variable="PIN"/>
+            <output expression="&quot;Enter 1 for money withdraw&quot;" newline="True"/>
+            <output expression="&quot;Enter 2 for pin change&quot;" newline="True"/>
+            <output expression="&quot;Enter 3 for money deposit&quot;" newline="True"/>
+            <output expression="&quot;Enter 4 to check bank balance&quot;" newline="True"/>
+            <declare name="fn" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER THE FUNCTION THAT YOU NEED TO DO &quot;" newline="True"/>
+            <input variable="fn"/>
+            <if expression="fn==1">
+                <then>
+                    <declare name="Balance" type="Real" array="False" size=""/>
+                    <output expression="&quot;Please enter your bank Balance&quot;" newline="True"/>
+                    <input variable="Balance"/>
+                    <if expression="Balance&lt;500">
+                        <then>
+                            <output expression="&quot;You cant withdraw money due to less bank balance&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <declare name="Secret" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Please enter your secret pin&quot;" newline="True"/>
+                    <input variable="Secret"/>
+                    <if expression="Pin==Secret">
+                        <then/>
+                        <else>
+                            <output expression="&quot;*Invalid* Your private pin is wrong&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                    <declare name="Amount" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Please enter the amount that to be withdrawn&quot;" newline="True"/>
+                    <input variable="Amount"/>
+                    <if expression="Amount&lt;Balance">
+                        <then/>
+                        <else>
+                            <output expression="&quot;Sorry your bank balance is less than the amount that to be withdrawn&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                    <declare name="Present" type="Real" array="False" size=""/>
+                    <assign variable="present" expression="Balance-Amount"/>
+                    <output expression="&quot;Your present bank balance is   &quot;&amp;Present" newline="True"/>
+                    <output expression="&quot;THANK YOU FOR VISITING SBI&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="fn==2">
+                        <then>
+                            <declare name="Secret" type="Integer" array="False" size=""/>
+                            <output expression="&quot;Please enter your ATM pin&quot;" newline="True"/>
+                            <input variable="Secret"/>
+                            <if expression="Pin==Secret">
+                                <then>
+                                    <declare name="Newpin" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Enter the new pin&quot;" newline="True"/>
+                                    <input variable="Newpin"/>
+                                    <declare name="Confirmation" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Please enter the Pin once again for confirmation&quot;" newline="True"/>
+                                    <input variable="Confirmation"/>
+                                    <if expression="Newpin=Confirmation">
+                                        <then>
+                                            <output expression="&quot;Your pin has been changed &quot;" newline="True"/>
+                                            <output expression="&quot;THANK YOU FOR VISTING SBI&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Pin and confirmation pin are not same. Once verify and try again&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Sorry Incorrect Pin&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="fn==3">
+                                <then>
+                                    <declare name="Secret" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Enter Your ATM pin&quot;" newline="True"/>
+                                    <input variable="Secret"/>
+                                    <if expression="Pin==Secret">
+                                        <then>
+                                            <declare name="Balance" type="Real" array="False" size=""/>
+                                            <output expression="&quot;Enter your bank balance&quot;" newline="True"/>
+                                            <input variable="Balance"/>
+                                            <declare name="Deposit" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;Enter the amount that should be deposited&quot;" newline="True"/>
+                                            <input variable="Deposit"/>
+                                            <output expression="&quot;Insert the amount into the machine&quot;" newline="True"/>
+                                            <declare name="Present" type="Real" array="False" size=""/>
+                                            <assign variable="Present" expression="Deposit+Balance"/>
+                                            <output expression="&quot;THis is your present balance  &quot;&amp;Present" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid You entered wrong pin&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="fn==4">
+                                        <then>
+                                            <declare name="Secret" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;Enter your ATM pin&quot;" newline="True"/>
+                                            <input variable="Secret"/>
+                                            <if expression="Secret==pin">
+                                                <then>
+                                                    <declare name="Balance" type="Integer" array="False" size=""/>
+                                                    <output expression="&quot;Please enter your bank balance&quot;" newline="True"/>
+                                                    <input variable="Balance"/>
+                                                    <output expression="&quot;This is your bank balance  &quot;&amp;Balance" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Invalid You enterd wrong pin&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Invalid, There are only four functions&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
