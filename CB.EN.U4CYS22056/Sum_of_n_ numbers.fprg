@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:46:17 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTEyLTAyOzA4OjU4OjE4IEFNOzMzMzA="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTEyLTAyOzA5OjQ2OjE3IEFNOzI7MzQzNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The system get number from user and process then sum"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=n">
+                <assign variable="sum" expression="i+sum"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="&quot;The sum is  &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

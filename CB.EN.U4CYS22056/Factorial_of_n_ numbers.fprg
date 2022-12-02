@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:47:55 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTEyLTAyOzA4OjU4OjE4IEFNOzMzMzA="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIyLTEyLTAyOzA5OjQ3OjU1IEFNOzM7MzQ0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The system gets number from from user and finds its factorial"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="product" type="Integer" array="False" size=""/>
+            <assign variable="product" expression="1"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=n">
+                <assign variable="product" expression="i*product"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <output expression="&quot;The factorial is  &quot;&amp;product" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
