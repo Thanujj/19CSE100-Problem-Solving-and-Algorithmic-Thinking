@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22056"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 11:02:03 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIzLTAxLTIwOzA5OjQ2OjQ3IEFNOzMzMjk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjA1NjsyMDIyMjNNQVlDMDA5MzsyMDIzLTAxLTIwOzExOjAyOjAzIEFNOzc7MzQyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program is to do selective sorting"/>
+            <declare name="i, n, j, m" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter no of elements in array&quot;" newline="True"/>
+            <comment text="Getting number.of elements in the array "/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n+1"/>
+            <comment text="Running loop to get array elements"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Enter the elements in array&quot;&amp;i" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <comment text="Performing loop to arrange the elements in the ascending order "/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n" direction="inc" step="1">
+                    <comment text="Using 'if loop' to find highest number and arrange it in order"/>
+                    <if expression="a[j]&lt;a[i]">
+                        <then>
+                            <assign variable="m" expression="a[j]"/>
+                            <assign variable="a[j]" expression="a[i]"/>
+                            <assign variable="a[i]" expression="m"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;The selection sort&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+                <comment text="Printing the output in ascending order"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
